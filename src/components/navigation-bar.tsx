@@ -10,13 +10,13 @@ const navItems = [
   },
   {
     path: "/congkhai",
-    label: "Công khai",
-    icon: <Icon icon="zi-poll-solid" />,
+    label: "Đường dây nóng",
+    icon: <Icon icon="zi-call" />,
   },
   {
     path: "/pakn",
-    label: "Phản ảnh",
-    icon: <Icon icon="zi-edit" />,
+    label: "Hỏi đáp",
+    icon: <Icon icon="zi-post" />,
   },
   {
     path: "/infor",
