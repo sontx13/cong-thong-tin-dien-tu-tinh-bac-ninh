@@ -1,0 +1,145 @@
+.body-convert {
+  margin: 10px;
+  font-size: 21px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+table {
+  width: fit-content !important;
+}
+
+.detail-article img,
+.body-convert img {
+  width: 100% !important;
+}
+
+.header-detail {
+  background-color: rgb(17 94 89);
+  color: white;
+}
+
+.header-detail .zaui-icon {
+  color: white;
+}
+
+.zaui-header-back .zaui-btn-icon-only .zaui-btn-icon .zaui-icon {
+  color: #fff;
+  font-weight: bold;
+}
+
+.zaui-header-title {
+  font-weight: bold;
+}
+
+.zaui-header {
+  margin-bottom: 0px;
+}
+
+.zaui-btn-primary,
+.zaui-btn-primary.zaui-btn-highlight {
+  background-color: #008de3;
+}
+
+.zaui-btn-secondary,
+.zaui-btn-secondary.zaui-btn-highlight {
+  background-color: #52bece;
+  color: white;
+}
+
+.ds-chuyenmuc button {
+  background: none !important;
+  padding: 8px 10px;
+}
+
+.ds-chuyenmuc button span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.ds-chuyenmuc .zaui-btn-primary span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  border-bottom: 2px solid #fff;
+}
+
+.img-logo {
+  height: 30px;
+  width: 30px;
+  left: 10px;
+  top: 55px;
+  position: absolute;
+}
+
+.bg-image {
+  background-image: linear-gradient(80deg, #007d7d 30%, #165793 100%);
+}
+
+.sub_header {
+  margin-left: 20px;
+  color: #fff;
+}
+
+.img-register {
+  width: 60px;
+  height: 60px;
+}
+
+.img-loading{
+  width: 5px;
+  height: 5px;
+}
+
+.div-loading{
+  text-align: center
+}
+
+.title-vaitro {
+  color: #165793;
+  padding-bottom: 10px;
+}
+
+.title-sdt {
+  color: #165793;
+  padding-bottom: 10px;
+}
+
+.title-chon {
+  color: #165793;
+  padding-bottom: 10px;
+}
+
+.bg-blue {
+  background-color: #165793;
+}
+
+.btn-chon {
+  width: 100%;
+}
+
+.btn-chon-2 {
+  width: 40%;
+  margin-top: 50px;
+  background-color: orange;
+}
+
+.btn-chon-3 {
+  width: 40%;
+}
+
+.btn-chon-orange {
+  width: 100%;
+  background-color: rgb(218, 22, 22);
+  text-align: center;
+}
+.btn-chon-full {
+  width: 100%;
+}

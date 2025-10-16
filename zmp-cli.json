@@ -1,13 +1,13 @@
 {
-  "cwd": "/Users/lap15182-local/Desktop/zalo/zaui-coffee",
-  "name": "Cổng TTĐT tỉnh Bắc Ninh",
+  "cwd": "/Users/lap15182-local/Desktop/zalo/zmp-restaurant",
+  "name": "QCDC BGG",
   "framework": "react-typescript",
   "cssPreProcessor": "scss",
   "includeTailwind": true,
   "package": "zmp-ui",
   "stateManagement": "recoil",
   "newProject": true,
-  "template": "single-view",
+  "template": "blank",
   "theming": {
     "customColor": false,
     "color": "#007aff",

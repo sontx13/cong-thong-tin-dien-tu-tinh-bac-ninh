@@ -1,22 +1,26 @@
 {
   "app": {
-    "title": "Cổng TTĐT tỉnh Bắc Ninh",
+    "title": "QCDC tỉnh Bắc Giang",
+    "headerColor": "",
     "textColor": "black",
+    "statusBarColor": "#ffffff",
     "leftButton": "none",
-    "statusBar": "transparent",
-    "selfControlLoading": false,
+    "textAlign": "left",
+    "actionBarHidden": true,
     "hideAndroidBottomNavigationBar": false,
     "hideIOSSafeAreaBottom": false,
-    "actionBarHidden": true
+    "selfControlLoading": false,
+    "statusBar": "transparent"
   },
+  "template": {
+    "primaryColor": "#006af5",
+    "secondaryColor": "",
+    "serviceFee": 25000,
+    "searchBar": true
+  },
+  "debug": false,
   "listCSS": [],
   "listSyncJS": [],
   "listAsyncJS": [],
-  "template": {
-    "name": "zaui-coffee",
-    "primaryColor": "#006af5",
-    "prefixCurrencySymbol": false,
-    "currencySymbol": "đ",
-    "headerLogo": ""
-  }
+  "pages": []
 }

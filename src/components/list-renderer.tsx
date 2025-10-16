@@ -28,14 +28,14 @@ export function ListRenderer<T>({
   }, [items]);
 
   return (
-    <Box className="bg-background rounded-xl">
+    <Box className="bg-white rounded-xl ">
       {title && <Text.Title className="p-4 pb-0">{title}</Text.Title>}
       <Box>
         {(isCollapsed ? collapsedItems : items).map((item, i, list) => (
           <div
             key={renderKey ? renderKey(item) : i}
             onClick={() => onClick?.(item)}
-            className="flex space-x-4 p-4 last:pb-0"
+            className="flex space-x-3 p-4 last:pb-0"
           >
             {renderLeft(item)}
             <Box className="flex-1 min-w-0 relative">

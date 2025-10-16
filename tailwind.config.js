@@ -5,13 +5,14 @@ module.exports = {
   },
   theme: {
     extend: {
+      aspectRatio: {
+        cinema: "21/9",
+        card: "4/3",
+      },
       colors: {
         primary: "var(--zmp-primary-color)",
-        gray: "#767A7F",
-        divider: "#E9EBED",
-        green: "#288F4E",
-        background: "#ffffff",
-        skeleton: "rgba(0, 0, 0, 0.1)",
+        secondary: "var(--zmp-secondary-color)",
+        background: "var(--zmp-page-bg-color)",
       },
     },
   },
