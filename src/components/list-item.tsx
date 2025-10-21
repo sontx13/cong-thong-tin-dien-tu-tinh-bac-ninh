@@ -1,6 +1,6 @@
 import React, { FC, MouseEventHandler, ReactNode } from "react";
 import { Box, Button, Icon, Text } from "zmp-ui";
-import { logo_qcdc, logo_register } from "../configs";
+import { logo_app, logo_register } from "../configs";
 
 export interface ListItemProps {
   title: ReactNode;

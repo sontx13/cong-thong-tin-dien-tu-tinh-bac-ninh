@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Box, Text, Checkbox, Page, Icon, Button, useSnackbar, Modal, Sheet } from "zmp-ui";
-import { BASE_URL, logo_qcdc, web_url } from "../../configs";
+import { BASE_URL, logo_app, web_url } from "../../configs";
 import { openShareSheet, TextAlignType } from "zmp-sdk";
 import { useRecoilValue } from "recoil";
 import { userState } from "../../state";

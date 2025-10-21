@@ -2,7 +2,6 @@ import React, { Suspense } from "react";
 import { Route } from "react-router-dom";
 import { App, ZMPRouter, AnimationRoutes, SnackbarProvider } from "zmp-ui";
 import { RecoilRoot } from "recoil";
-import HomePage from "../pages";
 import Header from "./header";
 import NavigationBar from "./navigation-bar";
 import CongKhaiDetail from "../components/cong_khai/cong-khai-detail"
@@ -18,6 +17,8 @@ import CongKhaiItem from "./cong_khai/cong-khai";
 import CreatePAKN from "./pakn/create";
 import PAKNDetail from "./pakn/pakn-detail";
 import ArticleDetail from "../pages/article/detail";
+import PostPage from "../pages";
+import HomePage from "../pages";
 
 const MyApp = () => {
   return (
@@ -36,6 +37,7 @@ const MyApp = () => {
               <Suspense fallback={<div className="flex h-full justify-center items-center ">Loading...</div>}>
                 <AnimationRoutes>
                   <Route path="/" element={<HomePage />} />
+                  <Route path="/post" element={<PostPage />} />
                   <Route path="/article" element={<ArticlePage />}></Route>
                   <Route path="/article-detail" element={<ArticleDetail />}></Route>
                   <Route path="/calendar" element={<CalendarPage />}></Route>

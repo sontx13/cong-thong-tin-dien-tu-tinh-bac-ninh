@@ -1,7 +1,15 @@
 export const BASE_URL = "https://qcdc.vnptlab.com/api";
 
-export const logo_qcdc =
+export const logo_app =
   "https://vnptbacninh.com/storage/app/logo_bacninh.png";
+
+export const BASE_API = "https://vnptbacninh.com/api/v1";
+//banner
+export const urlImage = "https://vnptbacninh.com/storage/";
+//banner
+export const getBanners = "banners?current=1&pageSize=5&sort=sort,asc";
+
+  
 export const logo_danvan =
   "https://s120-ava-talk.zadn.vn/7/c/1/7/1/120/7f741c7c14611306553be5c0bb3e4960.jpg";
 export const web_url = "https://qcdc.vnptlab.com";
