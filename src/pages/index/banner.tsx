@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import { Box } from "zmp-ui";
-import { BASE_API,urlImage,getBanners } from "../configs";
+import { BASE_API,urlImage,getBanners } from "../../configs";
 
 
 interface IBanner {

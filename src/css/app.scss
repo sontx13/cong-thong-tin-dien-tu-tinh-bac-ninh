@@ -6,6 +6,7 @@
   --zmp-secondary-color: #ff8a00;
   --zmp-page-bg-color: #f4f5f6;
 }
+
 body {
   background-color: var(--zmp-page-bg-color);
 }
@@ -140,5 +141,16 @@ hr {
 .createPAKN {
   .zaui-modal-content-description {
     text-align: center;
+  }
+}
+//sontx
+.zaui-header {
+  position: sticky;
+  height: auto;
+  margin-bottom: 0;
+  flex: none;
+
+  &::after {
+    display: none;
   }
 }
