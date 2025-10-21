@@ -23,6 +23,9 @@ import {
   PageInfor,
 } from "./models";
 import { calcCrowFliesDistance } from "./utils/location";
+import categories from "../mock/categories.json";
+import { CategoryType } from "./types/category_type";
+
 
 export const userState = selector({
   key: "user",
@@ -199,6 +202,17 @@ export const positionState = selector<Location | undefined>({
   },
 });
 
+
+export const categories_newState = selector<CategoryType[]>({
+  key: "categories",
+  get: () => categories,
+});
+
+export const selectedCategoryIdState = atom({
+  key: "selectedCategoryId",
+  default: "coffee",
+});
+
 export const restaurantsState = selector<Restaurant[]>({
   key: "restaurants",
   get: () => [
@@ -253,25 +267,25 @@ export const restaurantsState = selector<Restaurant[]>({
   ],
 });
 
-export const categoriesState = selector({
-  key: "categories",
-  get: () => ["Pizza", "Pasta", "Salad", "Sandwich", "Drink"],
-});
+//export const categoriesState = selector({
+  //key: "categories",
+  //get: () => ["Pizza", "Pasta", "Salad", "Sandwich", "Drink"],
+//});
 
-export const menuState = selector({
-  key: "menu",
-  get: ({ get }) => {
-    const categories = get(categoriesState);
-    const foods = get(foodsState);
-    return {
-      categories: categories.map((category, index) => ({
-        id: String(index),
-        name: category,
-        foods: foods.filter((food) => food.categories.includes(category)),
-      })),
-    };
-  },
-});
+// export const menuState = selector({
+//   key: "menu",
+//   get: ({ get }) => {
+//     const categories = get(categoriesState);
+//     const foods = get(foodsState);
+//     return {
+//       categories: categories.map((category, index) => ({
+//         id: String(index),
+//         name: category,
+//         foods: foods.filter((food) => food.categories.includes(category)),
+//       })),
+//     };
+//   },
+// });
 
 export const foodsState = selector({
   key: "foods",

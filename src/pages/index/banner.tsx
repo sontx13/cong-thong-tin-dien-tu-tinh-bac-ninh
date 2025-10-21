@@ -19,7 +19,7 @@ export const Banner: FC = () => {
       const response = await fetch(`${BASE_API}/${getBanners}`);
       if (!response.ok) throw new Error("Network response was not ok");
       const jsonData = await response.json();
-      console.log("📦 Banners API response:", JSON.stringify(jsonData));
+      //console.log("📦 Banners API response:", JSON.stringify(jsonData));
       setBanners(jsonData.data?.result || []);
     } catch (error) {
       console.error("Error fetching banners:", error);
