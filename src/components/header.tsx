@@ -14,7 +14,7 @@ function AppHeader() {
 
   const title = useMemo(() => {
     if (location.pathname === "/") {
-      return "QCDC Bắc Giang";
+      return "Cổng TTĐT tỉnh Bắc Ninh";
     }
     if (location.pathname === "/infor") {
       return "Cá nhân";

@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import { Box, Page } from "zmp-ui";
 import { Divider } from "../components/divider";
 import { Banner  } from "./index/banner";
-import { Categories } from "./index/categories";
+import { Configs } from "./index/config";
 import { SearchHome } from "./index/search_home";
 import { Welcome } from "./welcome";
 
@@ -15,7 +15,7 @@ const HomePage: React.FunctionComponent = () => {
       <SearchHome />
       <Banner />
       <Suspense>
-          <Categories />
+          <Configs />
         </Suspense>
       </Box>
     </Page>

@@ -143,7 +143,7 @@ const PostPage = () => {
 
       {showText ? (
         <Text className="sub_header" onClick={() => openUrlInWebview()}>
-          Chuyên trang QCDC tỉnh Bắc Giang
+          Cổng TTĐT tỉnh Bắc Ninh
         </Text>
       ) : (
         <Text className="sub_header" onClick={() => openUrlInWebview()}>
