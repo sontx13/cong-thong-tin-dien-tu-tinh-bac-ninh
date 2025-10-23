@@ -80,7 +80,8 @@ table {
 }
 
 .bg-image {
-  background-image: linear-gradient(80deg, #007d7d 30%, #165793 100%);
+  /* background-image: linear-gradient(80deg, #007d7d 30%, #165793 100%); */
+  background: #008de3;
 }
 
 .sub_header {

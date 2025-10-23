@@ -16,7 +16,7 @@ export const RecommendContent: FC = () => {
   const recommendProducts = useRecoilValue(recommendProductsState);
 
   return (
-    <Section title="Gợi ý cho bạn" padding="title-only">
+    <Section title="Tin tức nổi bật" padding="title-only">
       <Swiper slidesPerView={1.25} spaceBetween={16} className="px-4">
         {recommendProducts.map((product) => (
           <SwiperSlide key={product.id}>

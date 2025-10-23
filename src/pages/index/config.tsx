@@ -35,7 +35,7 @@ export const Configs: FC = () => {
 
   const openUrlInWebview = async (url: string) => {
     try {
-      console.log("🧭 Try openWebview:", url);
+      //console.log("🧭 Try openWebview:", url);
       await openWebview({
         url,
         config: {
@@ -44,7 +44,7 @@ export const Configs: FC = () => {
         },
       });
     } catch (error) {
-      console.warn("⚠️ openWebview failed, fallback to window.open", error);
+      //console.warn("⚠️ openWebview failed, fallback to window.open", error);
       window.open(url, "_blank");
     }
   };
@@ -52,10 +52,10 @@ export const Configs: FC = () => {
   const handleClick = (config: IConfig) => {
     if (config.url){
       if (config.type === 1 ) {
-        console.log("openUrlInWebview:"+ config.url)
+        //console.log("openUrlInWebview:"+ config.url)
         openUrlInWebview(config.url);
       } else {
-        console.log("url:"+config.url)
+        //console.log("url:"+config.url)
         navigate(config.url);
       }
     }

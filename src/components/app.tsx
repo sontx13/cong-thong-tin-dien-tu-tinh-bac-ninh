@@ -17,8 +17,8 @@ import CongKhaiItem from "./cong_khai/cong-khai";
 import CreatePAKN from "./pakn/create";
 import PAKNDetail from "./pakn/pakn-detail";
 import ArticleDetail from "../pages/article/detail";
-import PostPage from "../pages";
 import HomePage from "../pages";
+import PostPage from "../pages/post";
 
 const MyApp = () => {
   return (
