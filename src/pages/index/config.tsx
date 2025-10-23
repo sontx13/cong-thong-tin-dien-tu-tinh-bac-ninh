@@ -10,11 +10,11 @@ interface IConfig {
   name: string;
   icon: string;
   url: string;
+  type: number;
 }
 
 export const Configs: FC = () => {
   const navigate = useNavigate();
-
   const [configs, setConfigs] = useState<IConfig[]>([]);
 
   const fetchConfigs = async () => {
@@ -25,7 +25,7 @@ export const Configs: FC = () => {
       console.log("📦 configs API response:", JSON.stringify(jsonData));
       setConfigs(jsonData.data?.result || []);
     } catch (error) {
-      console.error("Error fetching banners:", error);
+      console.error("Error fetching configs:", error);
     }
   };
 
@@ -33,20 +33,48 @@ export const Configs: FC = () => {
     fetchConfigs();
   }, []);
 
-  
+  const openUrlInWebview = async (url: string) => {
+    try {
+      console.log("🧭 Try openWebview:", url);
+      await openWebview({
+        url,
+        config: {
+          style: "bottomSheet",
+          leftButton: "back",
+        },
+      });
+    } catch (error) {
+      console.warn("⚠️ openWebview failed, fallback to window.open", error);
+      window.open(url, "_blank");
+    }
+  };
 
+  const handleClick = (config: IConfig) => {
+    if (config.url){
+      if (config.type === 1 ) {
+        console.log("openUrlInWebview:"+ config.url)
+        openUrlInWebview(config.url);
+      } else {
+        console.log("url:"+config.url)
+        navigate(config.url);
+      }
+    }
+  };
 
   return (
     <Box className="bg-white grid grid-cols-4 gap-4 p-4">
       {configs.map((config, i) => (
-        
         <div
           key={i}
-          onClick={() => navigate("/category")}
-          className="flex flex-col space-y-2 items-center"
+          onClick={() => handleClick(config)}
+          className="flex flex-col space-y-2 items-center cursor-pointer"
         >
-          <img className="w-12 h-12" src={urlImage + 'config/' + config.icon} />
-          <Text size="xxSmall" className="text-gray my-text-center">
+          <img
+            className="w-12 h-12"
+            src={`${urlImage}config/${config.icon}`}
+            alt={config.name}
+          />
+          <Text size="xxSmall" className="text-gray text-center">
             {config.name}
           </Text>
         </div>
