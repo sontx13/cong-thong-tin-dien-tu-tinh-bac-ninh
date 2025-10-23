@@ -97,10 +97,27 @@ export interface Food {
   options: Option[];
 }
 
+
+// export interface Option {
+//   key: string;
+//   label: string;
+//   selected: boolean;
+// }
+export interface PercentSale {
+  type: "percent";
+  percent: number;
+}
+
+export interface FixedSale {
+  amount: number;
+  type: "fixed";
+}
+
+export type Sale = PercentSale | FixedSale;
 export interface Option {
-  key: string;
-  label: string;
-  selected: boolean;
+  id: string;
+  label?: string;
+  priceChange?: Sale;
 }
 
 export interface Extra {

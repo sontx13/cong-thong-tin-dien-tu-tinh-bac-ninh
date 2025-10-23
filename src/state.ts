@@ -27,6 +27,7 @@ import categories from "../mock/categories.json";
 import { CategoryType } from "./types/category_type";
 import { Product, Variant } from "./types/product";
 import { wait } from "./utils/async";
+import { Cart_NEW } from "./types/cart";
 
 
 export const userState = selector({
@@ -230,6 +231,11 @@ export const positionState = selector<Location | undefined>({
     }
     return undefined;
   },
+});
+
+export const cartState = atom<Cart_NEW>({
+  key: "cart",
+  default: [],
 });
 
 
@@ -645,23 +651,23 @@ export const currentRestaurantTabState = atom<TabType>({
   default: "info",
 });
 
-export const cartState = atom<Cart>({
-  key: "cart",
-  default: {
-    items: [],
-  },
-});
+// export const cartState = atom<Cart>({
+//   key: "cart",
+//   default: {
+//     items: [],
+//   },
+// });
 
-export const totalState = selector({
-  key: "total",
-  get: ({ get }) => {
-    const cart = get(cartState);
-    return cart.items.reduce(
-      (total, item) => total + item.quantity * item.food.price,
-      0
-    );
-  },
-});
+// export const totalState = selector({
+//   key: "total",
+//   get: ({ get }) => {
+//     const cart = get(cartState);
+//     return cart.items.reduce(
+//       (total, item) => total + item.quantity * item.food.price,
+//       0
+//     );
+//   },
+// });
 
 export const bookingsState = atom<Booking[]>({
   key: "bookings",
