@@ -72,10 +72,13 @@ table {
 }
 
 .img-logo {
+  color: #fff;
   height: 30px;
   width: 30px;
-  left: 10px;
+  left: 15px;
   top: 55px;
+  font-size: 24px;
+  font-weight: bold;
   position: absolute;
 }
 
@@ -97,6 +100,10 @@ table {
 .img-loading{
   width: 5px;
   height: 5px;
+}
+
+.bn-teal{
+  background-color: rgb(6 103 167 / 68%);
 }
 
 .div-loading{

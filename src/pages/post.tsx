@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Page, Box, Text } from "zmp-ui";
+import { Page, Box, Text, Icon, useNavigate } from "zmp-ui";
 import { QuickFilter } from "../components/inquiry";
 import ArticleItem from "../components/article";
 import { useRecoilState, useRecoilValue } from "recoil";
@@ -123,11 +123,18 @@ const PostPage = () => {
 
   const currentDate = new Date();
   const formattedDate = getFormattedDate(currentDate);
-
+  const navigate = useNavigate();
   return (
     <Page restoreScrollOnBack className="bg-white bg-image">
+      <Header />
       <Divider size={35} />
-      <img src={`${logo_app}`} className="img-logo object-cover" />
+      <Box
+        className="cursor-pointer flex items-center"
+        onClick={() => navigate("/")}
+      >
+        <Icon icon="zi-chevron-left" className="img-logo object-cover" />
+      </Box>
+     
       <Box
         mx={3}
         mb={2}
@@ -136,7 +143,9 @@ const PostPage = () => {
           marginLeft: "40px",
           width: "65%",
         }}
+        //showBackIcon={location.pathname !== "/"}
       >
+       
         <QuickFilter activeCategory={activeCategory}  onChangeActiveCategory={onChangeActiveCategory}/>
       </Box>
       <Divider size={10} />

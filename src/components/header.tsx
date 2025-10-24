@@ -16,6 +16,9 @@ function AppHeader() {
     if (location.pathname === "/") {
       return "Cổng TTĐT tỉnh Bắc Ninh";
     }
+    if (location.pathname === "/post") {
+      return "Tin tức";
+    }
     if (location.pathname === "/infor") {
       return "Cá nhân";
     }
