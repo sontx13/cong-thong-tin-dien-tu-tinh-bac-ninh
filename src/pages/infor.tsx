@@ -267,7 +267,7 @@ function Welcome() {
       </Box>
 
       <Divider size={10} />
-      {userCheck.name ? (
+      {/* {userCheck.name ? (
         <Box className="space-y-3 px-4 ">
           <Box
             className="bg-green text-white rounded-xl p-4 space-y-2"
@@ -282,7 +282,7 @@ function Welcome() {
         </Box>
       ) : (
         <></>
-      )}
+      )} */}
 
       <Divider size={10} />
       {SHOW_QUAN_TAM_ZALO === "1" ? (

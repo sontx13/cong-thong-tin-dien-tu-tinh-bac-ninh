@@ -3,12 +3,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper";
 import { Box } from "zmp-ui";
 import { BASE_API,urlImage,getBanners } from "../../configs";
+import { openWebview } from "zmp-sdk";
 
 
 interface IBanner {
   id: number;
   image: string;
-  url?: string;
+  url: string;
 }
 
 export const Banner: FC = () => {
@@ -23,6 +24,23 @@ export const Banner: FC = () => {
       setBanners(jsonData.data?.result || []);
     } catch (error) {
       console.error("Error fetching banners:", error);
+    }
+  };
+
+  const openUrlInWebview = async (url: string) => {
+    if (!url) return;
+    try {
+      console.log("🧭 Try openWebview:", url);
+      await openWebview({
+        url,
+        config: {
+          style: "bottomSheet",
+          leftButton: "back",
+        },
+      });
+    } catch (error) {
+      console.warn("⚠️ openWebview failed, fallback to window.open", error);
+      window.open(url, "_blank");
     }
   };
 
@@ -42,13 +60,10 @@ export const Banner: FC = () => {
         {banners.map((banner) => (
           <SwiperSlide key={banner.id} className="px-4">
             <Box
-              as="a"
-              href={banner.url || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full rounded-lg aspect-[2/1] bg-cover bg-center bg-skeleton block"
+              onClick={() => openUrlInWebview(banner.url)}
+              className="w-full rounded-lg aspect-[2/1] bg-cover bg-center bg-skeleton block cursor-pointer"
               style={{
-                backgroundImage: `url(${urlImage + 'banner/' + banner.image})`,
+                backgroundImage: `url(${urlImage + "banner/" + banner.image})`,
               }}
             />
           </SwiperSlide>
