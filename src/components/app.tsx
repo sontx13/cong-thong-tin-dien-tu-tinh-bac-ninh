@@ -9,7 +9,6 @@ import ArticlePage from "../pages/article";
 import CalendarPage from "../pages/calendar";
 import CongKhaiPage from "../pages/congkhai";
 import InforPage from "../pages/infor";
-import Cart from "./cart";
 import { ConfigProvider, getConfig } from "./config-provider";
 import PAKNPage from "../pages/pakn";
 import Xa from "./cong_khai/xa";
@@ -32,7 +31,7 @@ const MyApp = () => {
         <App>
           <SnackbarProvider>
             <ZMPRouter >
-              {/* <Cart /> */}
+    =
               {/* <Header /> */}
               <Suspense fallback={<div className="flex h-full justify-center items-center ">Loading...</div>}>
                 <AnimationRoutes>

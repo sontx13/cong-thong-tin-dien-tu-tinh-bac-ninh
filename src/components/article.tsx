@@ -68,9 +68,7 @@ const ArticleItem: FunctionComponent<ArticleProps> = ({
         </Title>
         <div className="m-2">
           <span className="italic text-base">
-            {" "}
-            Ngày đăng: {time}
-            {article.published_at}{" "}
+            {`Ngày đăng: ${time} ${article.published_at}`}
           </span>
         </div>
         {article.excerpt ? (
@@ -83,6 +81,9 @@ const ArticleItem: FunctionComponent<ArticleProps> = ({
       </Page>
     );
   }
+  
+  // 🔧 Thêm dòng này để tránh lỗi TS
+  return null;
 };
 
 export default ArticleItem;
