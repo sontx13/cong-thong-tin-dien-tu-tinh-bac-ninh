@@ -49,7 +49,7 @@ function ArticleDetail() {
               src={data[0].image}
               className="absolute w-full h-full rounded-md "
             />
-            <div className="text-justify text-white bn-teal bg-opacity-50 absolute top-0 w-full h-full">
+            <div className="text-justify text-white bg-opacity-50 absolute top-0 w-full h-full">
               <Title className="m-2 mt-5 text-xl">{data[0].title}</Title>
               <Text className="text-right italic m-2 mt-5">
                 {time}

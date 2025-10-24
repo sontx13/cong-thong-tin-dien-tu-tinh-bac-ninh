@@ -97,17 +97,13 @@ table {
   height: 60px;
 }
 
-.img-loading{
+.img-loading {
   width: 5px;
   height: 5px;
 }
 
-.bn-teal{
-  background-color: rgb(6 103 167 / 68%);
-}
-
-.div-loading{
-  text-align: center
+.div-loading {
+  text-align: center;
 }
 
 .title-vaitro {

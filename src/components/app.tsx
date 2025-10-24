@@ -6,7 +6,6 @@ import Header from "./header";
 import NavigationBar from "./navigation-bar";
 import CongKhaiDetail from "../components/cong_khai/cong-khai-detail"
 import ArticlePage from "../pages/article";
-import CalendarPage from "../pages/calendar";
 import CongKhaiPage from "../pages/congkhai";
 import InforPage from "../pages/infor";
 import { ConfigProvider, getConfig } from "./config-provider";
@@ -38,8 +37,7 @@ const MyApp = () => {
                   <Route path="/" element={<HomePage />} />
                   <Route path="/post" element={<PostPage />} />
                   <Route path="/article" element={<ArticlePage />}></Route>
-                  <Route path="/article-detail" element={<ArticleDetail />}></Route>
-                  <Route path="/calendar" element={<CalendarPage />}></Route>
+                  <Route path="/article-detail" element={<ArticleDetail />}></Route>      
                   <Route path="/congkhai" element={<CongKhaiPage />}></Route>
                   <Route path="/infor" element={<InforPage />}></Route>
                   <Route path="/pakn" element={<PAKNPage />}></Route>
