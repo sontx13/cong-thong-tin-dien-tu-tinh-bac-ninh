@@ -14,8 +14,6 @@
   },
   "template": {
     "primaryColor": "#006af5",
-    "currencySymbol": "đ",
-    "prefixCurrencySymbol": false,
     "secondaryColor": "",
     "serviceFee": 25000,
     "searchBar": true

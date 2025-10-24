@@ -3,8 +3,8 @@ import { getConfig } from "../../utils/config";
 
 
 export const DisplayPrice: FC<{ children: number }> = ({ children }) => {
-  const symbol = getConfig((config) => config.template.currencySymbol);
-  if (getConfig((config) => config.template.prefixCurrencySymbol)) {
+  const symbol = getConfig((config) => 'đ');
+  if (getConfig((config) => false)) {
     return (
       <>
         {symbol}
